@@ -12,13 +12,13 @@
 
 html {
     font-size: 13px; /*13px = 1rem*/
-    background: #f8f8f8; 
+    background: #f8f8f8; /*배경색 회색*/
 }
 
 body {
-    margin: 0 auto; /*body태그에 기본적으로 적용되는 여백제거*/
-    max-width: 720px;
-    min-width: 360px;
+    margin: 0 auto; /*body태그에 기본적으로 적용되는 상하여백제거, 좌우 가운데*/
+    max-width: 720px; /*최대 너비*/
+    min-width: 360px; /*최소 너비*/
     background: #fff;
 }
 
@@ -58,11 +58,43 @@ h3{
 /* 헤더 영역 S */
 header .site-top {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 66px;
-    border-bottom: 1px solid #e6e6e6;
-    padding: 0 15px;
+    justify-content: space-between; /* 좌우 여백 가운데*/
+    align-items: center; /* 상하 가운데*/
+    height: 66px; /* 높이*/
+    border-bottom: 1px solid #e6e6e6; /* 로고와 회원로그인 사이 경계선*/
+    padding: 18px 15px 13px; /*이모티콘이 너무 끝에 붙어있으니 여백을 줘서 여유감을 주기*/
 }
 
+header .logo img {
+    height: 34px; /*너비는 높이에따라 알아서 비율 조정될거*/
+}
+
+header .site-top i {
+    font-size: 2rem; /* xeicon은 너비높이가 아닌 font-size로 크기조정*/
+}
+
+header .site-top .left i {
+    margin-right: 10px; /* xeicon 사이 간격 띄우기*/
+}
+
+header .site-top .right i {
+    margin-left: 10px; /* xeicon 사이 간격 띄우기*/
+}
+
+header .site-top2 {
+    align-items: center; /* 상하 가운데*/
+    height: 50px; /* 높이*/
+    border-bottom: 1px solid #e6e6e6; /* 로고와 회원로그인 사이 경계선*/
+    padding: 18px 15px 13px; /*이모티콘이 너무 끝에 붙어있으니 여백을 줘서 여유감을 주기*/
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
 /* 헤더 영역 E */
+
+/* 회원로그인 영역 S */
+
+
+/* 회원로그인 영역 E */
