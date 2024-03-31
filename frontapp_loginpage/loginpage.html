@@ -34,23 +34,110 @@
             </section>
             <section class="site-top2">
                     <a href="#" >
-                        <i class="xi-angle-left-thin"></i>
-                    </a>
-                    <a href="#">회원가입</a>
+                        <i class="xi-angle-left-thin" id="icon"></i>
+                    </a> 
+                    회원로그인
             </section>
         </header>
        
         <main>
             <section class="login">
-                
+                <form name = "frm" method = "post" action="#" autocomplete="off">
+                    <input type="hidden" name="mode" value="join">
+                    <fieldset>
+                        <legend>회원 로그인</legend>
+                        <dl>
+                            <dt>아이디</dt>
+                            <dd>
+                                <input type="text" name="userId" autofocus placeholder="아이디" required minlength="6" id="id">
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>비밀번호</dt>
+                            <dd>
+                                <input type="password" name="userPw" placeholder="비밀번호" required minlength="8" id="pw">
+                            </dd>
+                        </dl>
+                        <dl>
+                        <dt>여기 어떻게 없애지...</dt>
+                            <dd>
+                                <label>
+                                    <input type="checkbox" name="saveAutoLogin" value="로그인유지" id="chk1">로그인 유지
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="saveId" value="아이디저장" id="chk2">아이디저장
+                                </label>
+                            </dd>
+                        </dl>
 
-
+                    </fieldset>
+                    <button type="submit" id="submit">로그인</button>
+                    <div class="links">
+                        <a href="#">회원가입</a>
+                        <a href="#">아이디찾기</a>
+                        <a href="#" class="last">비밀번호찾기</a>
+                    </div>
+                </form>
             </section>
 
+            <section class="sns_login">
+                <span class="montserrat">SNS</span>간편로그인
+                <a href="#">
+                    <img src="/frontapp_loginpage/images/naver_login.png" alt="네이버로그인">
+                </a>
+                <a href="#" >
+                    <img src="/frontapp_loginpage/images/kakao_login.png" alt="카카오로그인">
+                </a>         
+            </section>
+
+            <section class="order">
+                <form name = "frm2" method = "post" action="#" autocomplete="off">
+                    <input type="hidden" name="mode" value="join">
+                    <fieldset>
+                        <legend>비회원 주문조회</legend>
+                        <dl>
+                            <dt>주문자 이름과 주문 번호를 입력해주세요</dt>
+                            <dd>
+                                <input type="text" name="orderId" autofocus placeholder="주문자명" required minlength="3" id="orderId">
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>비밀번호</dt>
+                            <dd>
+                                <input type="text" name="orderNb" placeholder="주문번호" required minlength="6" id="orderNb">
+                            </dd>
+                        </dl>
+                    </fieldset>
+                    <button type="submit" id="ordersearh">로그인</button>
+                </form>
+            </section>
         </main>
        
         <footer>
+            <a href="#" class="logo">
+                <img src="images/logo_bottom.png" alt="하단 로고">
+            </a>
 
+            <a href="tel:0327651884" class="center-phone montserrat">
+                <img src="images/phone.png" alt="전화번호">
+                032.765.1884
+            </a>
+
+            <div class="bank-info">
+                입금정보:신한은행 <span class="montserrat">100-033-833284</span> (주)뉴마커스
+            </div>
+
+            <div class="company-info">
+                (주)뉴마커스 사업자 정보
+                <img src="images/arrow_dn.png" alt="더보기">
+            </div>
+
+            <div class="links">
+                <a href="#">회사소개</a>
+                <a href="#">이용약관</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="#" class="last">PC버전</a>
+            </div>
         </footer>
     </body>
 </html>
