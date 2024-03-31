@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap'); /* 웹폰트*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap'); /* 웹폰트*/
+ 
+
+/*스타일 초기화 S*/
+* {
+    color: #000;
+    box-sizing: border-box; /* 경계선을 기준으로 너비 높이 지정*/
+    outline: none; /* input: 커서 시 깜빡깜빡하고 칸이 검정으로 굵게되는 효과 제거*/
+    font-family: "Noto Sans KR, sans-serif";
+}
+
+html {
+    font-size: 13px; /*13px = 1rem*/
+    background: #f8f8f8; 
+}
+
+body {
+    margin: 0 auto; /*body태그에 기본적으로 적용되는 여백제거*/
+    max-width: 720px;
+    min-width: 360px;
+    background: #fff;
+}
+
+ul,ol, dl, dt, dd { 
+    margin: 0;
+    padding: 0;  /*들여쓰기 및 여백제거*/
+}
+
+ul, ol {
+    list-style: none; /*도트 모양 제거*/
+}
+
+a {
+    text-decoration: none; /*링크 연결 시 밑줄, 파란글씨 처리된는 것 제거*/
+}
+
+img {
+    border: 0;
+} /*이미지 경계선 제거*/
+/*스타일 초기화 E*/
+
+/* 공통 스타일 S */
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+} /* 기본폰트 노토산스인데 몬트세랏폰트가 필요할 때 쓰는 용*/
+
+h3{
+    font-size: 1.538rem;
+    color: #212121;
+    text-align: center;
+    line-height: 1;
+    padding: 20px;
+
+}
+/* 공통 스타일 E */
+
+/* 헤더 영역 S */
+header .site-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 66px;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0 15px;
+}
+
+/* 헤더 영역 E */
