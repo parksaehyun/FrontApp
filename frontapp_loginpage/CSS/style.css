@@ -82,13 +82,19 @@ header .site-top .right i {
 }
 
 header .site-top2 {
-    align-items: center; /* 상하 가운데*/
+    /* align-items: center; /* 상하 가운데*/
     height: 50px; /* 높이*/
     border-bottom: 1px solid #e6e6e6; /* 로고와 회원로그인 사이 경계선*/
     padding: 18px 15px 13px; /*이모티콘이 너무 끝에 붙어있으니 여백을 줘서 여유감을 주기*/
     text-align: center;
     font-size: 20px;
     font-weight: 700;
+    position: relative; /* 현재 요소의 왼쪽상단*/
+}
+
+
+header .site-top2 i {
+    position: absolute; left: 10px; /*현재문서의 상단이지만 상위요소에 relative적용되면 상위 요소의 상단으로 기준이 바뀜*/
 }
 
 /* 헤더 영역 E */
@@ -99,6 +105,18 @@ header .site-top2 {
     background: #ffffff;
     border-bottom: 1px solid #dfe1e5;
     margin-bottom: 10px;
+}
+
+.login input[type='text'], /* input태그는 인라인임*/
+.login input[type='password'] { 
+    display: block;
+}
+
+.login input[type='text'] { 
+    margin-bottom: 10px; 
+}
+.login input[type='password'] { 
+    margin-bottom: 15px; 
 }
 
 fieldset {
@@ -174,14 +192,49 @@ main .links a {
 
 
 /* sns간편 로그인 영역 S */
+main .sns_login {
+    background-color: #ffffff;
+    padding: 30px 15px 45px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #dfe1e5;
+}
+
+main .snslogin_img {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .sns_login .simple_login{
+    display: block;
+}
+
+main .sns_login a img {
+    width: calc(100% - 10px);
+    max-width: 230px;
+
+}
+
 /* sns간편 로그인 영역 E */
 
 /* 비회원 주문조회 영역 S */
-main .order legend {
+main .order {
+    background-color: #ffffff;
+    padding: 30px 15px 45px;
+}
+
+main  legend {
     font-size: 17px;
     color: #333333;
     font-weight: 700;
     line-height: 1;
+    margin-bottom: 8px;
+}
+
+main .order .order_txt {
+    color: #8b8b8b;
+    font-size: 13px;
+    line-height: 1;
+    margin-bottom: 15px;
 }
 
 main .order #orderId {
@@ -192,7 +245,9 @@ main .order #orderId {
     border-radius: 3px;
     padding: 0 10px;
     font-size: 13px;
+    margin-bottom: 10px;
 }
+
 
 main .order #orderNb {
     width: 100%;
@@ -202,9 +257,10 @@ main .order #orderNb {
     border-radius: 3px;
     padding: 0 10px;
     font-size: 13px;
+    margin-bottom: 15px;
 }
 
-main .order #ordersearch {
+main #ordersearh {
     width: 100%;
     display: block;
     height: 45px;
