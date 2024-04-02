@@ -3,15 +3,15 @@
  
 
 /*스타일 초기화 S*/
-* {
-    color: #000;
-    box-sizing: border-box; /* 경계선을 기준으로 너비 높이 지정*/
+* { /* 적체적용*/
+    color: #000; 
+    box-sizing: border-box; /* conten-box(기본값)인데 이거는 경계선 어그러짐, 경계선을 기준으로 너비 높이 지정*/
     outline: none; /* input: 커서 시 깜빡깜빡하고 칸이 검정으로 굵게되는 효과 제거*/
-    font-family: "Noto Sans KR, sans-serif";
+    font-family: "Noto Sans KR, sans-serif"; /*다른 글씨체 = 이거보다 더 높은 태그인 clss적용 */
 }
 
 html {
-    font-size: 13px; /*13px = 1rem*/
+    font-size: 13px; /*13px = 1rem 가장 상위 초기 값 설정값이 rem*/
     background: #f8f8f8; /*배경색 회색*/
 }
 
@@ -22,8 +22,8 @@ body {
     background: #fff;
 }
 
-ul,ol, dl, dt, dd { 
-    margin: 0;
+ul,ol, li, dl, dt, dd { 
+    margin: 0; 
     padding: 0;  /*들여쓰기 및 여백제거*/
 }
 
@@ -36,8 +36,8 @@ a {
 }
 
 img {
-    border: 0;
-} /*이미지 경계선 제거*/
+    border: 0; /*이미지 경계선 제거*/
+} 
 /*스타일 초기화 E*/
 
 /* 공통 스타일 S */
@@ -57,8 +57,8 @@ h3{
 
 /* 헤더 영역 S */
 header .site-top {
-    display: flex;
-    justify-content: space-between; /* 좌우 여백 가운데*/
+    display: flex; 
+    justify-content: space-between; /* 끝에 몰고 가운데 여백 균등하게, 좌우 여백 가운데*/
     align-items: center; /* 상하 가운데*/
     height: 66px; /* 높이*/
     border-bottom: 1px solid #e6e6e6; /* 로고와 회원로그인 사이 경계선*/
@@ -66,35 +66,39 @@ header .site-top {
 }
 
 header .logo img {
-    height: 34px; /*너비는 높이에따라 알아서 비율 조정될거*/
+    height: 34px; /*랜더링된 크기 수치 참고, 너비는 높이에따라 알아서 비율 조정될거*/
 }
 
 header .site-top i {
-    font-size: 2rem; /* xeicon은 너비높이가 아닌 font-size로 크기조정*/
+    font-size: 2.1rem; /* xeicon은 너비높이가 아닌 font-size로 크기조정*/
 }
 
-header .site-top .left i {
+header .site-top .left a {
     margin-right: 10px; /* xeicon 사이 간격 띄우기*/
 }
 
-header .site-top .right i {
+header .site-top .right a {
     margin-left: 10px; /* xeicon 사이 간격 띄우기*/
 }
 
 header .site-top2 {
     /* align-items: center; /* 상하 가운데*/
-    height: 50px; /* 높이*/
-    border-bottom: 1px solid #e6e6e6; /* 로고와 회원로그인 사이 경계선*/
-    padding: 18px 15px 13px; /*이모티콘이 너무 끝에 붙어있으니 여백을 줘서 여유감을 주기*/
     text-align: center;
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 1.539rem;
+    font-weight: bold;
+    border-bottom: 1px solid #e6e6e6; /* 로고와 회원로그인 사이 경계선*/
+    height: 50px; /* 높이 보더경계선 1px인거 빼줘야함*/
+    padding: 0 15px ; /*이모티콘이 너무 끝에 붙어있으니 여백을 줘서 여유감을 주기 padding수치를 바구니 회원로그인이 가운데로 왔다...*/
     position: relative; /* 현재 요소의 왼쪽상단*/
+    line-height: 49px;
 }
 
 
 header .site-top2 i {
-    position: absolute; left: 10px; /*현재문서의 상단이지만 상위요소에 relative적용되면 상위 요소의 상단으로 기준이 바뀜*/
+    position: absolute; 
+    left: 10px; /*현재문서의 상단이지만 상위요소에 relative적용되면 상위 요소의 상단으로 기준이 바뀜, 왼족에서 띄어주자*/
+    font-size: 2.2rem;
+    top: 9px;/* 위에서 아래로 내리자*/
 }
 
 /* 헤더 영역 E */
@@ -276,7 +280,7 @@ main #ordersearh {
 
 /* 푸터 영역 S */
 footer {
-    background: #abdbda;
+    background: #f8f8f8;
     padding: 25px 0 80px;
     margin-top: 25px;
 }

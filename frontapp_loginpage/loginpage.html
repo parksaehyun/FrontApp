@@ -2,13 +2,13 @@
 <html>
     <head>
     	<meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes, minimum-scale=0.5,maximum-scale=3.0"> <!-- 모바일에서 뜨게끔 하는 장치 -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"><!-- 외부사이트 xeicon사이트 연결 -->
-        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.5,maximum-scale=3.0,initial-scale=1.0"> <!-- 모바일에서 뜨게끔 하는 장치 --><!--  최대확대3.0 최소 확대 0.5 scalable-손으로 확대 축소 가능-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"><!-- 외부사이트 xeicon사이트에서 설치 들어가서 링크 복사 붙여넣기해서 연결, https:를 붙여줘야 로딩이 느려지지 않음 -->
+        <link rel="stylesheet" href="css/style.css" type="text/css"><!--외부 스타일 연결-->
         <title>뉴마커스</title>
     </head>
     <body>
-        <header> <!-- 뼈대 -->
+        <header> <!-- 뼈대(시맨틱태그- header, main, footer) -->
             <section class="site-top">
                 <div class="left">
                     <a href="#">
@@ -32,12 +32,12 @@
                     </a>
                 </div>
             </section>
-            <section class="site-top2">
+            <nav class="site-top2">
                     <a href="#" >
                         <i class="xi-angle-left-thin" id="icon"></i>
                     </a> 
                     회원로그인
-            </section>
+            </nav>
         </header>
        
         <main>
