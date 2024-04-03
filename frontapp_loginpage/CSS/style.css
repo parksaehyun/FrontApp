@@ -396,3 +396,77 @@ footer .links a:not(.last):after {
     top: 4px;
 }
 /* 푸터영역 E */
+
+/* 하단고정메뉴 S */
+.bottom_menus {
+    position: fixed; /* 뷰포트가 배치의 기준 */
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    width: 100%;
+    height: 60px;
+    padding: 9px 15px;
+    border-top: 1px solid #dfe1e5;
+    display: flex; /* 배치 (좌 -> 우)*/
+}
+
+.bottom_menus button {
+    font-size: 2.5rem; /* 아이콘 너비 늘림 */
+    background: #fff;
+    border: 0;
+    line-height: 41px; /* 상하 가운데 */
+}
+
+
+.bottom_menus a {
+    width: 0;
+    flex-grow: 1; /* 균등하게 4등분 */
+    text-align: center; /* 텍스트 가운데 오게끔 */
+}
+
+.bottom_menus .txt {
+    color: #2d2f38;
+    font-size: 0.7rem;
+}
+
+.bottom_menus .icon {
+    height: 27px;
+    margin-bottom: 3px; /* 아이콘이랑 글자 띄우기*/
+}
+
+.bottom_menus .icon.pen {
+    background: url(../images/pen.png) no-repeat center center; /* 이미지 반복 되지않게*/
+    background-size: contain; /* 영역에 맞게 들어오게 */
+}
+
+.bottom_menus .icon.comment {
+    background: url(../images/comment.png) no-repeat center center; /* 이미지 반복 되지않게*/
+    background-size: contain; /* 영역에 맞게 들어오게 */
+}
+
+.bottom_menus .icon.truck {
+    background: url(../images/truck.png) no-repeat center center; /* 이미지 반복 되지않게*/
+    background-size: contain; /* 영역에 맞게 들어오게 */
+}
+
+.bottom_menus .icon.person {
+    background: url(../images/person.png) no-repeat center center; /* 이미지 반복 되지않게*/
+    background-size: contain; /* 영역에 맞게 들어오게 */
+}
+/* 하단고정메뉴 E */
+
+/* 하단퀵메뉴 S */
+    
+.bottom-quick-links {
+    position: fixed; 
+    bottom: 70px;
+    right: 10px;
+}
+
+.bottom-quick-links img{
+    display: block; /* 이미지는 인라인 속성이니 블록처리 해서 세로정렬되도록*/
+    width: 50px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+/* 하단퀵메뉴 E */
