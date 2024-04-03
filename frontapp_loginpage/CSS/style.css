@@ -131,8 +131,8 @@ fieldset {
 .login fieldset legend {
     font-size: 17px;
     color: #333333;
-    font-weight: 700;
-    line-height: 1;
+    font-weight: 700; /* 700 = bold, normal = 400*/
+    line-height: 1; /* 여백은 기본적으로 상하단에 10%씩 있다*/
     margin-bottom: 19px;
 }
 
@@ -141,7 +141,7 @@ main .login #id {
     width: 100%;
     height: 45px;
     font-size: 13px;
-    padding: 0 10px;
+    padding: 0 10px; /* 좌우여백 띄우자*/
     border-radius: 3px;
 }
 
@@ -152,6 +152,31 @@ main .login #pw {
     font-size: 13px;
     padding: 0 10px;
     border-radius: 3px;
+}
+
+main .chk_group {
+    margin: 15px 0 25px; /* 체크박스랑 로그인 띄우기*/
+}
+
+
+main input[type='checkbox'] {
+    display: none;
+}
+
+main input[type='checkbox']  + label { /* 형제선택*/
+    display: inline-block;
+    height: 23px;
+    padding-left: 30px;
+    background: url(../images/chk.png) no-repeat left center;
+    background-size: 23px;   /* 라인하이트와 하이트를 같게 하면 가운데로 온다*/
+}
+
+main input[type='checkbox']:checked  + label { /* 형제선택*/
+    display: inline-block;
+    height: 23px;
+    padding-left: 30px;
+    background: url(../images/chk_on.png) no-repeat left center;
+    background-size: 23px;   
 }
 
 main .login #chk1 {
@@ -182,15 +207,28 @@ main .login #submit {
     background-color: #8769f0;
     border-radius: 3px;
     text-align: center;
+    cursor: pointer; /* 커서대면 클릭손모양으로 마우스 커서 바뀜*/
 }
 
 main .links {
-    display: flex;
+    text-align: center; /* 글자 가운데*/
 }
 
 main .links a {
     width: 0;
     flex-grow: 1;
+}
+
+main .links a:not(.first)::before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 11px;
+    background: #212121;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    
 }
 /* 회원로그인 영역 E */
 
@@ -205,12 +243,18 @@ main .sns_login {
 
 main .snslogin_img {
     display: flex;
-    justify-content: space-between;
+    width: 0;
+    flex-grow: 1;
+}
+
+main .sns_login button:first-of-type {
+    margin-right: 10px;
 }
 
 main .sns_login .simple_login{
     display: block;
 }
+
 
 main .sns_login a img {
     width: calc(100% - 10px);
@@ -268,13 +312,14 @@ main #ordersearh {
     width: 100%;
     display: block;
     height: 45px;
-    border: 0;
-    color: #ffffff;
+    border: 1px solid #8769f0;
+    color: #8769f0;
     font-size: 15px;
     font-weight: 700;
-    background-color: #8769f0;
+    background-color: #ffffff;
     border-radius: 3px;
     text-align: center;
+    cursor: pointer
 }
 /* 비회원 주문조회 영역 E */
 
